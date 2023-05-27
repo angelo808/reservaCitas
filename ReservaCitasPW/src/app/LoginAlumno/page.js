@@ -21,6 +21,7 @@ const Login = () => {
         router.push('/LoginDocente')
     }
 
+
     const handleClick = () => {
         if (usuario==="20182686" && password==="qwerty") {
             router.push('/Principal')
@@ -51,13 +52,13 @@ const Login = () => {
                             <Link href="/Registro" text="Registrar nuevo usuario"></Link>
                             </div>
                             <div className='container-olvido'>
-                            <Link href="/ejercicio3" text="Olvide mi constraseña"></Link>
+                            <Link href="/Recuperar" text="Olvide mi constraseña"></Link>
                             </div>
                         </div>
                 </div>
                 <br/>
             </div>
-        <div className='contenedor-button'>
+        <div className='contenedor-butt'>
             <div className='contenedor-salir'>
                 <Button value="Salir"></Button>
             </div>

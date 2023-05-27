@@ -51,7 +51,7 @@ const Login = () => {
                             <Link href="/Registro" text="Registrar nuevo usuario"></Link>
                             </div>
                             <div className='container-olvido'>
-                            <Link href="/ejercicio3" text="Olvide mi constraseña"></Link>
+                            <Link href="/RecuperarContraseña" text="Olvide mi constraseña"></Link>
                             </div>
                         </div>
                 </div>
