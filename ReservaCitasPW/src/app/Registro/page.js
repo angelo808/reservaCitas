@@ -11,20 +11,21 @@ import Subtitle from '@/components/Subtitle/Subtitle.jsx';
 
 const Registro = () => {
 
-    const [usuario, setUsuario] = useState('')
-    const [password, setPassword] = useState('')
+    const [rol, setRol] = useState('')
+
 
     const router = useRouter()
 
     const volver = () =>{
-        router.push('/LoginAlumnos')
+        router.push('/LoginAlumno')
     }
 
     const handleClick = () => {
-        if (usuario==="admin" && password==="admin") {
-            router.push('/ejercicio6')
+        if (rol==="Estudiante") {
+            alert('Estudiante Registrado')
         } else
-            alert('Usuario o password incorrecto')
+            alert('Docente Registrado')
+
     }
 
     return (
@@ -37,26 +38,22 @@ const Registro = () => {
                         <div className='container-usuario'>
                             <Label text="Usuario"/>
                             <Form.Control type="text" 
-                            placeholder="Ingrese un nuevo usuario"
-                            onChange={e => setUsuario(e.target.value)} />
+                            placeholder="Ingrese un nuevo usuario"/>
                         </div>
                         <div className='container-correo'>
                             <Label text="Correo"/>
                             <Form.Control type="text" 
-                            placeholder="Ingrese un nuevo correo electronico"
-                            onChange={e => setUsuario(e.target.value)} />
+                            placeholder="Ingrese un nuevo correo electronico"/>
                         </div>
                         <div className='container-contraseña'>
                             <Label text = "Contraseña" />
                             <Form.Control type="password" 
-                            placeholder="Ingrese una nueva contraseña"
-                            onChange={e => setPassword(e.target.value)} />
+                            placeholder="Ingrese una nueva contraseña"/>
                         </div>
                         <div className='container-rep-contraseña'>
                             <Label text = "Confirmar contraseña" />
                             <Form.Control type="password" 
-                            placeholder="Confirme la contraseña"
-                            onChange={e => setPassword(e.target.value)} />
+                            placeholder="Confirme la contraseña"/>
                         </div>
                     </div>
 
@@ -67,19 +64,15 @@ const Registro = () => {
                     
                     
                     
-                    
-                    
                     <div className='container-nombres'>
                         <Label text = "Nombres" />
                         <Form.Control type="text" 
-                        placeholder="Ingresar los nombres del usuario"
-                        onChange={e => setPassword(e.target.value)} />
+                        placeholder="Ingresar los nombres del usuario"/>
                     </div>
                     <div className='container-apellidos'>
                         <Label text = "Apellidos" />
                         <Form.Control type="text" 
-                        placeholder="Ingresar los apellidos del usuario"
-                        onChange={e => setPassword(e.target.value)} />
+                        placeholder="Ingresar los apellidos del usuario" />
                     </div>
                     <div className='container-tipo'>
                         <Label text = "Tipo de Documento" />
@@ -93,13 +86,15 @@ const Registro = () => {
                         <Label text = "Numero de Documento" />
                         <Form.Control type="text" 
                         placeholder="Ingresar el numero de documento"
-                        onChange={e => setPassword(e.target.value)} />
+                         />
                     </div>
                     <div className='container-rol'>
                         <Label text = "Rol del Usuario" />
-                        <Form.Select aria-label="Default select example">
-                            <option value="1">Estudiante</option>
-                            <option value="2">Docente</option>
+                        <Form.Select aria-label="Default select example"
+                                     onChange={e => setRol(e.target.value)}>
+                            <option value="1">Eliga un rol obligatoriamente</option>
+                            <option value="2">Estudiante</option>
+                            <option value="3">Docente</option>
                         </Form.Select>
                     </div>
                 </div>
