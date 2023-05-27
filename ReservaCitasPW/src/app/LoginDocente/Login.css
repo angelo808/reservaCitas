@@ -1,3 +1,4 @@
+
 .container-login{
     display:flex;
     flex-direction: column;
@@ -14,13 +15,13 @@
 .contenedor-button{
     display:flex;
     flex-direction: row;
-    padding-left: 40%;
+    padding-left: 30%;
 
 }
-.container-principal{
+.container-principal-docente{
     border-style: Outset;
     margin: 15%;
-    background-color: ghostwhite;
+    background-color: #ceffee;
 }
 .container-links{
     display:flex;

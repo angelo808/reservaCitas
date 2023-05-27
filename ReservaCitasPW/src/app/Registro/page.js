@@ -17,7 +17,7 @@ const Registro = () => {
     const router = useRouter()
 
     const volver = () =>{
-        router.push('/Login')
+        router.push('/LoginAlumnos')
     }
 
     const handleClick = () => {

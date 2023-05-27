@@ -17,17 +17,22 @@ const Login = () => {
 
     const router = useRouter()
 
+    const cambioRol = () =>{
+        router.push('/LoginAlumno')
+    }
+
     const handleClick = () => {
-        if (usuario==="pepito" && password==="1234") {
+        if (usuario==="aguill" && password==="qwerty") {
             router.push('/Principal')
         } else
             alert('Usuario o password incorrecto')
     }
 
     return (
-        <div className='container-principal'>
+        <div className='container-principal-docente'>
             <div>
                 <Titulo text="Sistema de Citas para Atencion de Estudiantes" />
+                <Titulo text="Login Docentes" />
                 <div className='container-login'>
                     <div className='container-usuario'>
                         <Label text="Usuario"/>
@@ -58,6 +63,9 @@ const Login = () => {
             </div>
             <div className='contenedor-ingresar'>
                 <Button value="Ingresar" onClick={handleClick}></Button>
+            </div>
+            <div className='contenedor-rol-docente'>
+                <Button value="Cambiar Rol" onClick={cambioRol}></Button>
             </div>
         </div>
         </div>
