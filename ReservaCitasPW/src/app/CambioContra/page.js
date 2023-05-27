@@ -12,8 +12,9 @@ import Label from '@/components/Label/Label.jsx'
 
 const CambioContra = () => {
 
-    const [usuario, setUsuario] = useState('')
     const [password, setPassword] = useState('')
+    const [newpassword, setNewPassword] = useState('')
+    const [confirmpassword, setConfirmPassword] = useState('')
 
     const router = useRouter()
     const regresar = () =>{
@@ -21,10 +22,11 @@ const CambioContra = () => {
     }
 
     const handleClick = () => {
-        if (usuario==="admin" && password==="admin") {
-            router.push('/ejercicio6')
-        } else
-            alert('Usuario o password incorrecto')
+        if (password===newpassword) {
+            alert('Las contraseña nueva coincide con la anterior')
+        } if (newpassword===confirmpassword){
+            alert('Cambio de contraseña Exitoso')
+            }
     }
 
     return (
@@ -42,13 +44,13 @@ const CambioContra = () => {
                         <Label text = "Nueva Contraseña" />
                         <Form.Control type="password" 
                         placeholder="Ingrese su nueva contraseña"
-                        onChange={e => setPassword(e.target.value)} />
+                        onChange={e => setNewPassword(e.target.value)} />
                     </div>
                     <div className='container-confirmar-contraseña-nueva'>
                         <Label text = "Confirmar Nueva Contraseña" />
                         <Form.Control type="password" 
                         placeholder="Confirme su contraseña nueva"
-                        onChange={e => setPassword(e.target.value)} />
+                        onChange={e => setConfirmPassword(e.target.value)} />
                     </div>
                 </div>
                 <br/>
